@@ -10,13 +10,14 @@
     "Lob.com",
     "printing"
   ],
-  "version": "2.1.1",
+  "version": "2.1.2",
   "homepage": "https://github.com/lob/lob-node",
   "author": "Lob <support@lob.com> (https://www.lob.com/)",
   "contributors": [
     "Harry Zhang <harry@lob.com>",
     "Leore Avidar <leore@lob.com>",
-    "Peter Nagel <peter@lob.com>"
+    "Peter Nagel <peter@lob.com>",
+    "Ulf Schwekendiek <ulf@alamosquarelabs.com>"
   ],
   "dependencies": {
     "request": "^2.34.0",
