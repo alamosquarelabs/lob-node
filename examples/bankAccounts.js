@@ -1,5 +1,5 @@
-var Lob = require('../lib/lob');
-Lob = new Lob('test_0dc8d51e0acffcb1880e0f19c79b2f5b0cc');
+var lobFactory = require('../lib/index.js');
+var Lob = new lobFactory('test_0dc8d51e0acffcb1880e0f19c79b2f5b0cc');
 /* jshint camelcase: false */
 
 /*
@@ -47,4 +47,8 @@ Lob.bankAccounts.create({
 });
 /**/
 
+// Deleting a bank account
+Lob.bankAccounts.delete('bank_7a88fa3abe5e2da', function (err, res) {
+  console.log(err, res);
+});
 /* jshint camelcase: true */

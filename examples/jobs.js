@@ -1,5 +1,5 @@
-var Lob = require('../lib/lob');
-Lob = new Lob('test_0dc8d51e0acffcb1880e0f19c79b2f5b0cc');
+var lobFactory = require('../lib/index.js');
+var Lob = new lobFactory('test_0dc8d51e0acffcb1880e0f19c79b2f5b0cc');
 /* jshint camelcase: false */
 /*
  * JOBS Endpoint
@@ -62,9 +62,9 @@ Lob.jobs.list(function (err, data) {
 });
 /**/
 
-// List Jobs with offset:10, count:5
+// List Jobs with count: 5, offset: 10
 //
-Lob.jobs.list(5, 10, function (err, res) {
+Lob.jobs.list({count: 5, offset: 10}, function (err, res) {
   console.log(err, res);
 });
 /**/

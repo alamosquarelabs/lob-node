@@ -1,5 +1,5 @@
-var Lob = require('../lib/lob');
-Lob = new Lob('test_0dc8d51e0acffcb1880e0f19c79b2f5b0cc');
+var lobFactory = require('../lib/index.js');
+var Lob = new lobFactory('test_0dc8d51e0acffcb1880e0f19c79b2f5b0cc');
 /* jshint camelcase: false */
 /*
  * Postcards Endpoint
@@ -24,8 +24,8 @@ Lob.postcards.retrieve('psc_056fdd2b4a11a169', function (err, res) {
 Lob.postcards.create({
   name: 'Test Card',
   to: 'adr_3b5fe0b76713a6e8',
-  front: '@/home/Downloads/postcardfront.pdf',
-  back: '@/home/Downloads/postcardback.pdf'
+  front: '@' + __dirname + '/../test/assets/4x6.pdf',
+  back: '@' + __dirname + '/../test/assets/4x6.pdf',
 }, function (err, res) {
   console.log(err, res);
 });

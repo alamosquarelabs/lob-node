@@ -1,5 +1,5 @@
-var Lob = require('../lib/lob');
-Lob = new Lob('test_0dc8d51e0acffcb1880e0f19c79b2f5b0cc');
+var lobFactory = require('../lib/index.js');
+var Lob = new lobFactory('test_0dc8d51e0acffcb1880e0f19c79b2f5b0cc');
 /* jshint camelcase: false */
 /*
  * Objects Endpoint
@@ -30,7 +30,7 @@ Lob.objects.retrieve('obj_1d1188df1e8d6427', function (err, res) {
 //
 Lob.objects.create({
   name: 'My First Object',
-  file: '@/home/Downloads/goblue.pdf',
+  file: '@' + __dirname + '/../test/assets/4x6.pdf',
   setting_id: 100
 }, function (err, res) {
   console.log(err, res);
@@ -50,7 +50,7 @@ Lob.objects.create({
 
 // Delete an Object
 //
-Lob.objects.delete('obj_1d1188df1e8d6427', function (err, res) {
+/*Lob.objects.delete('obj_1d1188df1e8d6427', function (err, res) {
   console.log(err, res);
-});
+});*/
 /**/
